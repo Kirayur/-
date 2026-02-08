@@ -56,16 +56,16 @@ int main() {
         }
     }
 
-    std::cout << "percent, exact, mean, std\n";
+    std::cout << "percent,exact,mean,std\n";
 
     for (size_t i = 0; i < steps.size(); ++i) {
         mean[i] /= NUM_STREAMS;
         double variance = sq_sum[i] / NUM_STREAMS - mean[i] * mean[i];
         double stddev = std::sqrt(variance);
 
-        std::cout << steps[i] << ", "
-                  << exact[i] << ", "
-                  << mean[i] << ", "
+        std::cout << steps[i] << ","
+                  << exact[i] << ","
+                  << mean[i] << ","
                   << stddev << "\n";
     }
 
